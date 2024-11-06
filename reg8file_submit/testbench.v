@@ -33,12 +33,12 @@ reg [7:0] d;
 wire[7:0] q;
 
 initial begin
-    clr = 1'b1;   // 所有输入信号初始化，复位有效
+    clr = 1'b1;   
     en  = 1'b0;
     clk = 0;
     d   = 8'b0;
 
-    #10;           // 写入 
+    #10;          
     clr = 1'b0;
     en  = 1'b1;
     wsel= 3'b001;
@@ -47,13 +47,13 @@ initial begin
     wsel= 3'b111;
     d   = 8'b00000010;
 
-    #10;            // 读取
+    #10;            
     en = 1'b0;
     rsel = 3'b001;
     #5;
     rsel = 3'b111;
 
-    #5;             // 异步清零
+    #5;           
     clr = 1'b1;
     rsel = 3'b001;
     #5;

@@ -21,20 +21,20 @@
 
 
 module reg8file(
-    input clk,  //时钟信号
-    input clr,  //异步复位信号
-    input en,  //写入使能端
-    input [2:0] wsel,  //三位写入地址
-    input [2:0] rsel,  //三位读取地址
-    input [7:0] d,  //八位写入数据
-    output reg [7:0] q  //八位输出数据
+    input clk,  
+    input clr, 
+    input en,  
+    input [2:0] wsel, 
+    input [2:0] rsel, 
+    input [7:0] d,  
+    output reg [7:0] q  
     );
     
-    reg [7:0] regfile [7:0];  //八个八位寄存器
+    reg [7:0] regfile [7:0];  
     
-    always @(posedge clk or posedge clr)  //3-8译码器进行选择
+    always @(posedge clk or posedge clr)  
     begin
-        if(clr)  //异步复位，清空寄存器
+        if(clr)  
         begin
             regfile[0]<=8'b00000000;
             regfile[1]<=8'b00000000;
@@ -61,7 +61,7 @@ module reg8file(
         end
     end
     
-    always @(*)  //八选一数据选择器
+    always @(*) 
     begin
         case(rsel)
             3'b000:q=regfile[0];
