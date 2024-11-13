@@ -53,22 +53,22 @@ module led_display#(
     always @(*)
     begin
         case (data)
-            8'h00: led_data = ZERO;         /* ASCII '0' */
-            8'h01: led_data = ONE;          /* ASCII '1' */
-            8'h02: led_data = TWO;          /* ASCII '2' */
-            8'h03: led_data = THREE;        /* ASCII '3' */
-            8'h04: led_data = FOUR;         /* ASCII '4' */
-            8'h05: led_data = FIVE;         /* ASCII '5' */
-            8'h06: led_data = SIX;          /* ASCII '6' */
-            8'h07: led_data = SEVEN;        /* ASCII '7' */
-            8'h08: led_data = EIGHT;        /* ASCII '8' */
-            8'h09: led_data = NINE;         /* ASCII '9' */
-            8'h0a: led_data = TEN;          /* ASCII 'A' */
-            8'h0b: led_data = ELEVEN;       /* ASCII 'B' */
-            8'h0c: led_data = TWELVE;       /* ASCII 'C' */
-            8'h0d: led_data = THIRTEEN;     /* ASCII 'D' */
-            8'h0e: led_data = FOURTEEN;     /* ASCII 'E' */
-            8'h0f: led_data = FIFTEEN;      /* ASCII 'F' */
+            8'd48: led_data = ZERO;         /* ASCII '0' */
+            8'd49: led_data = ONE;          /* ASCII '1' */
+            8'd50: led_data = TWO;          /* ASCII '2' */
+            8'd51: led_data = THREE;        /* ASCII '3' */
+            8'd52: led_data = FOUR;         /* ASCII '4' */
+            8'd53: led_data = FIVE;         /* ASCII '5' */
+            8'd54: led_data = SIX;          /* ASCII '6' */
+            8'd55: led_data = SEVEN;        /* ASCII '7' */
+            8'd56: led_data = EIGHT;        /* ASCII '8' */
+            8'd57: led_data = NINE;         /* ASCII '9' */
+            8'd65: led_data = TEN;          /* ASCII 'A' */
+            8'd66: led_data = ELEVEN;       /* ASCII 'B' */
+            8'd67: led_data = TWELVE;       /* ASCII 'C' */
+            8'd68: led_data = THIRTEEN;     /* ASCII 'D' */
+            8'd69: led_data = FOURTEEN;     /* ASCII 'E' */
+            8'd70: led_data = FIFTEEN;      /* ASCII 'F' */
             default: led_data = NOTHING;    /* 非数字或字母字符 */
         endcase
     end
