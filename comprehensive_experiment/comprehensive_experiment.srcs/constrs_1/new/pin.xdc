@@ -5,7 +5,10 @@ set_property IOSTANDARD LVCMOS33 [get_ports rst]
 set_property PACKAGE_PIN P1 [get_ports button]
 set_property IOSTANDARD LVCMOS33 [get_ports button]
 
-
+set_property PACKAGE_PIN Y19 [get_ports uart_rx]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_rx]
+set_property PACKAGE_PIN V18 [get_ports uart_tx]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_tx]
 
 set_property PACKAGE_PIN F15 [get_ports {led_cx[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led_cx[7]}]
