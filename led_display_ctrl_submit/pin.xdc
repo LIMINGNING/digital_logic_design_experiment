@@ -41,7 +41,7 @@ set_property PACKAGE_PIN D19 [get_ports {led_en[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led_en[2]}]
 set_property PACKAGE_PIN E19 [get_ports {led_en[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led_en[1]}]
-set_property PACKAGE_PIN c19 [get_ports {led_en[0]}]
+set_property PACKAGE_PIN C19 [get_ports {led_en[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led_en[0]}]
 
 set_property PACKAGE_PIN F15 [get_ports {led_cx[7]}]
