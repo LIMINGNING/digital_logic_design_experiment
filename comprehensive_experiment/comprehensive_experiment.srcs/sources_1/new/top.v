@@ -24,7 +24,9 @@ module top(
     input wire clk,
     input wire rst,
     input wire button,
+    input wire uart_rx,
     input wire [7:0] data_in,
+    output wire uart_tx,
     output [7:0] led_cx,
     output [7:0] led_en
     );
@@ -41,7 +43,7 @@ module top(
         .clk(clk),
         .valid(valid_recv),
         .data(data),
-        .din(tx)
+        .din(uart_rx)
     );
 
     button_debounce u_button_debounce(
@@ -68,6 +70,7 @@ module top(
         .led_en(u_led_en)
     );
 
+    assign tx = uart_tx;
     assign led_cx = u_led_cx;
     assign led_en = u_led_en; 
 endmodule
